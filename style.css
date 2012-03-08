@@ -1,0 +1,67 @@
+html, body, div, p, span, ul, ol, li, a, img {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+#header {
+  height: 20%;
+}
+
+#content {
+  height: 60%;
+  text-align: center;
+}
+
+#social {
+  border-bottom: 1px dashed #3E3D40;
+  display: inline-block;
+  margin: 5em 0em 0.5em;
+}
+
+.website {
+  -moz-transition-property: -moz-transform;
+  -webkit-transition-property: -webkit-transform;
+  -o-transition-property: -webkit-transform;
+  -ms-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  display: inline-block;
+}
+
+.website ~ .website {
+  margin-left: 10px;
+}
+
+.website:hover {
+  -moz-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  -o-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  transform: tanslateY(-15px);
+}
+
+.website > a {
+
+}
+
+.website > a > img {
+  height: 10em;
+  width: 10em;
+}
+
+#footer {
+  height: 20%;
+}
