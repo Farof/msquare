@@ -38,6 +38,13 @@
         });
       };*/
 
+      Snake.init(document.getElementById('snake'), {
+        width: 30,
+        height: 15,
+        snakeWidth: 10,
+        speed: 100
+      });
+
   }, false);
 
 }(this));

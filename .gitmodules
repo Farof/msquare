@@ -1,0 +1,3 @@
+[submodule "snake.js"]
+	path = snake.js
+	url = git@github.com:Farof/snake.js.git

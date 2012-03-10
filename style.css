@@ -24,7 +24,7 @@ body {
 #social {
   border-bottom: 1px dashed #3E3D40;
   display: inline-block;
-  margin: 5em 0em 0.5em;
+  margin: 4em 0em 0em;
 }
 
 .website {
@@ -60,6 +60,14 @@ body {
 .website > a > img {
   height: 10em;
   width: 10em;
+}
+
+#contact {
+  margin-top: 0.5em;
+}
+
+#snake {
+  margin-top: 0.5em;
 }
 
 #footer {
