@@ -1,3 +1,6 @@
 [submodule "snake.js"]
 	path = snake.js
 	url = git@github.com:Farof/snake.js.git
+[submodule "frisbee"]
+	path = frisbee
+	url = git@github.com:Farof/frisbee.git
