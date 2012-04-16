@@ -4,3 +4,6 @@
 [submodule "frisbee"]
 	path = frisbee
 	url = git@github.com:Farof/frisbee.git
+[submodule "todo"]
+	path = todo
+	url = git@github.com:Farof/todo.git
