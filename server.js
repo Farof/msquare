@@ -43,8 +43,6 @@ process.on('SIGTERM', function () {
   sigQuit('server terminated');
 });
 
-fs.writeFileSync('process.pid', process.pid);
-
 const app = frisbee()
               .use(frisbee.static({
                 folder: __dirname,
@@ -59,4 +57,6 @@ server.on('close', function () {
 });
 
 log('start server');
-server.listen(process.argv[2] || 80);
+server.listen(process.argv[2] || 80, function () {
+  fs.writeFileSync('process.pid', process.pid);
+});
