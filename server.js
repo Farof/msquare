@@ -1,11 +1,12 @@
 #!/usr/bin/env /usr/local/bin/node
 
 const http = require('http');
+const fs = require('fs');
 const frisbee = require('./frisbee');
 var closeMsg = 'stop server';
 
 function log(msg) {
-  console.log(['[' + new Date() + ']', msg].join(' '));
+  console.log(['[' + new Date() + ']', '[pid: ' + process.pid + ']', msg].join(' '));
 }
 
 function sigQuit(msg) {
@@ -18,6 +19,7 @@ function sigQuit(msg) {
 
 process.on('exit', function () {
   log(closeMsg);
+  fs.unlinkSync('process.pid');
 });
 
 // -2 & ^C
@@ -40,6 +42,8 @@ process.on('SIGQUIT', function () {
 process.on('SIGTERM', function () {
   sigQuit('server terminated');
 });
+
+fs.writeFileSync('process.pid', process.pid);
 
 const app = frisbee()
               .use(frisbee.static({
