@@ -59,4 +59,4 @@ server.on('close', function () {
 });
 
 log('start server');
-server.listen(80);
+server.listen(process.argv[2] || 80);
