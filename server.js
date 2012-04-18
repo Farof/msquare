@@ -10,7 +10,7 @@ function log(msg) {
 
 function sigQuit(msg) {
   closeMsg = msg;
-  if (server && !closing) {
+  if (server) {
     server.close();
   }
   process.exit(0);
