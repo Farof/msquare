@@ -2,7 +2,7 @@
 
 const http = require('http');
 const fs = require('fs');
-const frisbee = require('./frisbee');
+
 var closeMsg = 'stop server';
 
 function log(msg) {
@@ -43,14 +43,9 @@ process.on('SIGTERM', function () {
   sigQuit('server terminated');
 });
 
-const app = frisbee()
-              .use(frisbee.static({
-                folder: __dirname,
-                cache: true,
-                expires: 1000 * 60 * 60 * 24
-              }));
 
-var server = http.createServer(app);
+
+var server = http.createServer(require('./index'));
 
 server.on('close', function () {
   process.exit(0);
